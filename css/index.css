@@ -173,3 +173,31 @@ header {
     height: 600px;
   }
 }
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 2.5%;
+}
+.intro h3 {
+  font-size: 2.8rem;
+  margin: 15px 0;
+  font-weight: bold;
+  color: #222222;
+}
+.intro .intro-item {
+  width: 98%;
+}
+.intro .intro-item img {
+  max-width: 100%;
+}
+@media (min-width: 800px) {
+  .intro .intro-item {
+    width: 48%;
+  }
+}
+.intro .intro-item .btn {
+  border: 1px solid #222222;
+  text-align: center;
+  padding: 10px;
+  margin: 15px 0 30px;
+}
