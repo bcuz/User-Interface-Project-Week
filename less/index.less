@@ -9,8 +9,8 @@ html {
   font-size: 62.5%;
   body {
     font-size: 1.6rem;
+    font-family: Roboto, Arial, sans-serif;    
     // not sure if that will def work.
-    font-family: Roboto, Arial, sans-serif;
     line-height: 2.4rem;
   }
 }
@@ -36,8 +36,6 @@ header {
 }
 
 .jumbotron {
-  // todo: mq
-  // desktop sizes in style guide.
   background: url(../img/home/home-mobile-jumbotron.png) no-repeat; 
   height: 260px;
   display: flex;
@@ -51,6 +49,23 @@ header {
   @media @desk {
     background: url(../img/home/home-jumbotron.png) no-repeat; 
     height: 600px;
+    // removing flex
+    display: block;
+    
+    .container {
+      max-width: 900px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; 
+
+      h2 {
+        margin-bottom: 40px;
+        font-size: 6.4rem;
+        line-height: 7.5rem;
+      }
+    }
   }
 }
 
