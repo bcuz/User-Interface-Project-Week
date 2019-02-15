@@ -200,11 +200,16 @@ h3 {
   width: 98%;
 }
 @media (min-width: 800px) {
+  .intro .intro-item h3 {
+    padding-top: 25px;
+  }
   .intro .intro-item:nth-child(1) {
     order: -1;
+    margin-bottom: 75px;
   }
   .intro .intro-item:nth-child(2) {
     order: -2;
+    padding-right: 1%;
   }
 }
 .intro .intro-item img {
@@ -220,6 +225,11 @@ h3 {
   text-align: center;
   padding: 10px;
   margin: 15px 0 30px;
+}
+@media (min-width: 800px) {
+  .intro .intro-item .btn {
+    display: inline-block;
+  }
 }
 .projects .project-item {
   margin-bottom: 35px;
