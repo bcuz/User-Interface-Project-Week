@@ -10,11 +10,12 @@ html {
   body {
     font-size: 1.6rem;
     // not sure if that will def work.
+    font-family: Roboto, Arial, sans-serif;
     line-height: 2.4rem;
   }
 }
 
-.container {
+.main {
   max-width: 1024px;
   margin: 0 auto;
 }
@@ -23,10 +24,15 @@ header {
   color: #fff;
   padding: 10px;
   background-color: #98a4af;
-  display: flex;
   font-size: 2.4rem;
   font-weight: bold;
-  justify-content: space-between;
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .jumbotron {
@@ -61,8 +67,27 @@ h3 {
   flex-wrap: wrap;
   margin: 30px 2.5% 10px;
 
+
+  @media @desk {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  
   .intro-item {
     width: 98%;
+    
+    @media @desk {
+      
+      &:nth-child(1) {
+        order: -1;
+      }
+      &:nth-child(2) {
+        order: -2;
+      }
+
+    }
 
     img {
       max-width: 100%;
