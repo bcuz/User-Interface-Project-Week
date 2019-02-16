@@ -215,25 +215,26 @@ h3 {
   width: 98%;
 }
 @media (min-width: 800px) {
+  .intro .intro-item {
+    width: 48%;
+  }
   .intro .intro-item h3 {
-    padding-top: 25px;
+    margin-top: 35px;
+  }
+  .intro .intro-item:nth-child(2) {
+    order: -2;
+    margin-right: 3%;
   }
   .intro .intro-item:nth-child(1) {
     order: -1;
     margin-bottom: 75px;
   }
-  .intro .intro-item:nth-child(2) {
-    order: -2;
-    padding-right: 1%;
+  .intro .intro-item:nth-child(3) {
+    margin-right: 3%;
   }
 }
 .intro .intro-item img {
   max-width: 100%;
-}
-@media (min-width: 800px) {
-  .intro .intro-item {
-    width: 48%;
-  }
 }
 .intro .intro-item .btn {
   border: 1px solid #222222;
@@ -319,10 +320,42 @@ footer {
   font-size: 1.4rem;
   line-height: 2.6rem;
 }
-footer .footer-item,
+footer .container {
+  max-width: 855px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 800px) {
+  footer {
+    padding-top: 40px;
+  }
+}
+footer .footer-item {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  width: 95%;
+}
+@media (min-width: 800px) {
+  footer .footer-item {
+    width: 16.66%;
+  }
+  footer .footer-item:nth-child(1) {
+    margin-left: 0%;
+    width: 35%;
+  }
+  footer .footer-item:nth-child(4) {
+    margin-right: 0;
+  }
+}
 footer .copyright {
   margin-left: 2.5%;
   margin-right: 2.5%;
+}
+@media (min-width: 800px) {
+  footer .copyright {
+    margin: 20px auto 0;
+  }
 }
 footer h4 {
   font-weight: bold;

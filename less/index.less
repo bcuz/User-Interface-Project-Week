@@ -95,21 +95,27 @@ h3 {
     width: 98%;
     
     @media @desk {
+      width: 48%;
 
       h3 {
         // align-items instead?
-        padding-top: 25px;
+        margin-top: 35px;
       }
       
+      &:nth-child(2) {
+        order: -2;
+        margin-right: 3%;
+        // display: flex;
+        // flex-direction: column;
+      }
       &:nth-child(1) {
         order: -1;
         margin-bottom: 75px;
       }
-      &:nth-child(2) {
-        order: -2;
-        padding-right: 1%;
-        // display: flex;
-        // flex-direction: column;
+
+      &:nth-child(3) {
+        margin-right: 3%;
+
       }
 
     }
@@ -119,10 +125,6 @@ h3 {
       // not sure why margin doesnt work here.
       // padding: 0 2.5%;
       // margin-top: 30px;
-    }
-
-    @media @desk {
-      width: 48%;
     }
 
     .btn {
@@ -225,13 +227,44 @@ footer {
   color: #fff;
   font-size: 1.4rem;
   line-height: 2.6rem;
-  // display: flex;
-  // flex-wrap: wrap;
   
+  .container {
+    max-width: 855px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media @desk {
+    padding-top: 40px;
+  }
   
-  .footer-item, .copyright {
+  .footer-item {
     margin-left: 2.5%;
     margin-right: 2.5%;
+    width: 95%;
+
+    @media @desk {
+      width: 16.66%;
+
+      &:nth-child(1) {
+        margin-left: 0%;
+        width: 35%;
+      }
+
+      &:nth-child(4) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .copyright {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+
+    @media @desk {
+      margin: 20px auto 0;
+    }
   }
   
   h4 {
