@@ -208,6 +208,7 @@ h3 {
     max-width: 855px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 60px;
   }
 }
 .intro .intro-item {
@@ -254,16 +255,30 @@ h3 {
 .projects .project-item {
   margin-bottom: 35px;
 }
-.projects h3,
+@media (min-width: 800px) {
+  .projects .project-item {
+    margin-bottom: 100px;
+  }
+}
+.projects h3 {
+  margin-bottom: 40px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+@media (min-width: 800px) {
+  .projects h3 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
 .projects p {
   margin-left: 2.5%;
   margin-right: 2.5%;
 }
 @media (min-width: 800px) {
-  .projects h3,
   .projects p {
-    margin-left: 0;
-    margin-right: 0;
+    max-width: 450px;
+    margin: 0 auto;
   }
 }
 .projects img {
@@ -281,6 +296,16 @@ h3 {
   left: 10px;
   background-color: #d8d8d8;
   text-transform: uppercase;
+}
+@media (min-width: 800px) {
+  .projects .rectangle {
+    right: 0px;
+    left: auto;
+  }
+  .projects .rectangle.left-desktop {
+    right: auto;
+    left: 0px;
+  }
 }
 .projects p:first-of-type {
   margin-top: 70px;

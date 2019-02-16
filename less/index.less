@@ -87,6 +87,7 @@ h3 {
     max-width: 855px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 60px;
 
   }
   
@@ -149,9 +150,15 @@ h3 {
 
   .project-item {
     margin-bottom: 35px;
+
+    @media @desk {
+      margin-bottom: 100px; 
+    }
   }
 
-  h3, p {
+  h3 {
+    // potential mixin
+    margin-bottom: 40px;
     margin-left: 2.5%;
     margin-right: 2.5%;
 
@@ -159,7 +166,16 @@ h3 {
       margin-left: 0;
       margin-right: 0;
     }
+  }
 
+  p {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+
+    @media @desk {
+      max-width: 450px;
+      margin: 0 auto;
+    }
   }
 
   // repetitive
@@ -182,6 +198,17 @@ h3 {
     text-transform: uppercase;
     // not sure if % the best thing here.
     // width: 90%;
+
+    @media @desk {
+      right: 0px;
+      left: auto;
+
+      // maybe could be done more elegantly.
+      &.left-desktop {
+        right: auto;
+        left: 0px;
+      }
+    }
   }
 
   p:first-of-type {
@@ -189,7 +216,7 @@ h3 {
   }
 
   p:last-of-type {
-    margin-top: 20px;
+    margin-top: 20px;  
   }
 }
 
