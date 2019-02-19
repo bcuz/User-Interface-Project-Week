@@ -14,20 +14,39 @@
 
 <body>
 
-	<div class="main">
-		<header>
-			<div class="container">
-				<h1>S&J</h1>
-				<img src="img/nav-hamburger.png" alt="">
-			</div>
-			
-			<!-- Menu Content -->
+	<!-- The overlay -->
+<div id="myNav" class="overlay">
+		<h1>S&J</h1>
+
+		<!-- Button to close the overlay navigation -->
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	
+		<!-- Overlay content -->
+		<div class="overlay-content">
+			<a href="#">Home</a>
+			<a href="#">Services</a>
+			<a href="#">Contact</a>
 			<!-- <nav>
 				<li>Home</li>
 				<li>Services</li>
 				<li>Contact</li>
 			</nav> -->
-		</header>
+		</div>
+	
+	</div>
+	
+	<!-- Use any element to open/show the overlay navigation menu -->
+	<!-- <span >open</span> -->
+<header>
+	<div class="container">
+		<h1>S&J</h1>
+		<img src="img/nav-hamburger.png" alt="" onclick="openNav()">
+	</div>
+	
+	<!-- Menu Content -->
+</header>
+
+	<div class="main">
 		<section class="jumbotron">
 			<!-- <img src="img/home/home-mobile-jumbotron.png" alt=""> -->
 			<div class="container">
