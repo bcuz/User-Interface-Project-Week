@@ -5,30 +5,15 @@
   box-sizing: border-box;
 }
 
-// body {
-//   // pointer-events:none;
-
-//   &.overlay:before {
-//     content: "";
-//      position: fixed;
-//      z-index: 1;
-//      height: 100%;
-//      width: 100%;
-//      left: 0;
-//      top: 0;
-//      background: rgba(0,0,0, .5);  
-//      pointer-events:auto;
-
-//   }
-//   &.remove:before {
-//     display: none;
-//   }
-// }
-
-// #myNav {
-//   max-width: 1024px;
-//   margin: 0 auto;
-// }
+html {
+  font-size: 62.5%;
+  body {
+    font-size: 1.6rem;
+    font-family: Roboto, Arial, sans-serif;    
+    // not sure if that will def work.
+    line-height: 2.4rem;
+  }
+}
 
 /* The Overlay (background) */
 .overlay {
@@ -48,6 +33,10 @@
     position: absolute;
     top: 15px;
     left: 10px;
+
+    @media @desk {
+      left: 485px;
+    }
   }
 }
 
@@ -55,16 +44,27 @@
 .overlay-content {
   position: relative;
   top: 8%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
+  // width: 100%; /* 100% width */
+  // prob a more elegant way to do that.
+  max-width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left; /* Centered text/links */
   margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+
+  a {
+    // margin-top: 20px;
+    line-height: 8.5rem;
+    font-weight: bold;
+
+  }
 }
 
 /* The navigation links inside the overlay */
 .overlay a {
   padding: 8px;
   text-decoration: none;
-  font-size: 36px;
+  font-size: 4.8rem;
   color: #fff;
   display: block; /* Display block instead of inline */
   transition: 0.3s; /* Transition effects on hover (color) */
@@ -72,7 +72,7 @@
 
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+  color: #222222;
 }
 
 /* Position the close button (top right corner) */
@@ -81,18 +81,11 @@
   top: 5px;
   right: 5px;
   font-size: 60px;
-}
 
-
-html {
-  font-size: 62.5%;
-  body {
-    font-size: 1.6rem;
-    font-family: Roboto, Arial, sans-serif;    
-    // not sure if that will def work.
-    line-height: 2.4rem;
-
-  //   
+  // a diff way would prob be better to have
+  @media @desk {
+    top: 3px;
+    right: 485px;
   }
 }
 
@@ -108,11 +101,16 @@ h1 {
 }
 
 header {
-  padding: 10px;
+  padding: 15px;
   background-color: #98a4af;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  // top: 0;
   
   .container {
-    max-width: 1700px;
+    max-width: 855px;
+    // max-width: 1700px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
