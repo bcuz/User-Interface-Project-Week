@@ -232,16 +232,17 @@ h3 {
 
 
     .topic-items {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-        
+      margin-bottom: 100px;
+      
       .topic-item {
-        width: 48%;        
         display: none;
 
-        &:nth-child(1) {
-          display: block;
+        h3 {
+          width: 100%;
+        }
+        
+        div {
+          width: 48%;                  
         }
 
         p:last-child {
@@ -250,7 +251,10 @@ h3 {
       }
 
       .topic-item-selected {
-        display: block;
+        // display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
 
     }
