@@ -70,7 +70,7 @@ links = document.querySelectorAll('.topic-link')
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
   document.querySelector("header").style.zIndex = "0";
-  // document.querySelector("header").style.position = "static";
+  document.querySelector("header").style.position = "static";
 
 }
 
@@ -81,6 +81,6 @@ function openNav() {
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
   document.querySelector("header").style.zIndex = "1";
-  // document.querySelector("header").style.position = "fixed";
+  document.querySelector("header").style.position = "fixed";
 
 }
