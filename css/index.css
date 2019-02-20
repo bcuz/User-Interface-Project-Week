@@ -234,12 +234,37 @@ header {
   position: fixed;
   width: 100%;
   z-index: 1;
+  border-bottom: 2px solid #989c9f;
+}
+header.serve {
+  background-color: rgba(152, 164, 175, 0.9);
 }
 header .container {
   max-width: 855px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+@media (min-width: 800px) {
+  .jumbo-serv {
+    background: url(../img/services/services-jumbotron.png) no-repeat;
+    height: 250px;
+  }
+  .jumbo-serv .container {
+    font-size: 6.4rem;
+    line-height: 7.5rem;
+    color: #fff;
+    font-weight: bold;
+    max-width: 855px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .jumbo-serv .container h2 {
+    margin-bottom: 15px;
+  }
 }
 .jumbotron {
   background: url(../img/home/home-mobile-jumbotron.png) no-repeat;
@@ -277,6 +302,26 @@ h3 {
   font-weight: bold;
   color: #222222;
   margin: 15px 0;
+}
+@media (min-width: 800px) {
+  .intro-serve {
+    max-width: 855px;
+    margin: 40px auto;
+  }
+}
+@media (min-width: 800px) {
+  .topics {
+    max-width: 855px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .topics .tab {
+    border: 1px solid #000;
+    padding: 18px 27px;
+  }
 }
 .intro {
   display: flex;
