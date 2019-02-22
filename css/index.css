@@ -170,8 +170,10 @@ html body {
   margin: 10px auto 0;
   align-items: center;
 }
-.overlay h1 {
+.overlay h2 {
   margin-left: 10px;
+  font-size: 2.4rem;
+  font-weight: bold;
 }
 /* Position the content inside the overlay */
 .overlay-content {
@@ -227,6 +229,9 @@ header {
   z-index: 1;
   border-bottom: 2px solid #989c9f;
 }
+header a {
+  text-decoration: none;
+}
 header.serve {
   background-color: rgba(152, 164, 175, 0.9);
 }
@@ -235,6 +240,9 @@ header .container {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+header .container img {
+  cursor: pointer;
 }
 @media (min-width: 800px) {
   .jumbo-serv {
@@ -394,6 +402,7 @@ h3 {
   text-align: center;
   padding: 10px 25px;
   margin: 15px 0 30px;
+  cursor: pointer;
 }
 @media (min-width: 800px) {
   .intro .intro-item .btn {
@@ -445,16 +454,19 @@ h3 {
   position: absolute;
   text-align: center;
   font-size: 2.8rem;
-  padding: 25px 42px;
+  padding: 25px 50px;
   bottom: -50px;
   left: 10px;
   background-color: #d8d8d8;
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 @media (min-width: 800px) {
   .projects .rectangle {
     right: 0px;
+    bottom: -25px;
     left: auto;
+    border: 1px solid #fff;
   }
   .projects .rectangle.left-desktop {
     right: auto;
