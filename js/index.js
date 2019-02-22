@@ -72,15 +72,30 @@ function openNav() {
   document.querySelector("header").style.zIndex = "0";
   document.querySelector("header").style.position = "static";
 
+  if (window.location.pathname === "/index.html") {
+    document.querySelector(".jumbotron").style.marginTop = "-56px";
+  } else {
+    document.querySelector(".jumbo-service").style.marginTop = "-56px";
+  }
+
 }
 
-// document.querySelector('.closeNav').addEventListener('click', (e) => {
-  //     document.getElementById("myNav").style.width = "0%";
-  //   })
   /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
   document.querySelector("header").style.zIndex = "1";
   document.querySelector("header").style.position = "fixed";
-
+  if (window.location.pathname === "/index.html") {
+    document.querySelector(".jumbotron").style.marginTop = "0px";
+  } else {
+    document.querySelector(".jumbo-service").style.marginTop = "0px";
+  }
 }
+
+document.addEventListener('keydown', event => {
+  if (event.keyCode == 69) {
+    closeNav()
+  } else if (event.keyCode == 79) {
+    openNav()
+  }
+})
