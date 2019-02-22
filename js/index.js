@@ -67,12 +67,14 @@ class TabItem {
 links = document.querySelectorAll('.topic-link')
 .forEach(link => new TabLink(link))
 
+let homePage = ["/index.html", "/"]
+
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
   document.querySelector("header").style.zIndex = "0";
   document.querySelector("header").style.position = "static";
 
-  if (window.location.pathname === "/index.html") {
+  if (homePage.includes(window.location.pathname)) {
     document.querySelector(".jumbotron").style.marginTop = "-56px";
   } else {
     document.querySelector(".jumbo-service").style.marginTop = "-56px";
@@ -85,7 +87,7 @@ function closeNav() {
   document.getElementById("myNav").style.width = "0%";
   document.querySelector("header").style.zIndex = "1";
   document.querySelector("header").style.position = "fixed";
-  if (window.location.pathname === "/index.html") {
+  if (homePage.includes(window.location.pathname)) {
     document.querySelector(".jumbotron").style.marginTop = "0px";
   } else {
     document.querySelector(".jumbo-service").style.marginTop = "0px";
